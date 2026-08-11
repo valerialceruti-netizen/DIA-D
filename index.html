@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Principal - Portal de Navegação</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+        }
+
+        header h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.025em;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+            flex: 1;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .nav-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.75rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .nav-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-color: var(--primary);
+        }
+
+        .card-number {
+            display: inline-block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary);
+            background: #eff6ff;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            width: fit-content;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+
+        .card-arrow {
+            margin-top: 1.25rem;
+            font-weight: 600;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Portal de Navegação</h1>
+        <p>Selecione uma das seções abaixo para acessar o conteúdo correspondente.</p>
+    </header>
+
+    <main>
+        <div class="nav-grid">
+            <!-- Link 1 -->
+            <a href="Pagina1.html" class="nav-card">
+                <span class="card-number">Página 01</span>
+                <h2 class="card-title">Início / Sobre</h2>
+                <p class="card-desc">Informações gerais sobre o projeto, missão, visão e objetivos principais.</p>
+                <div class="card-arrow">Acessar página &rarr;</div>
+            </a>
+
+            <!-- Link 2 -->
+            <a href="Pagina2.html" class="nav-card">
+                <span class="card-number">Página 02</span>
+                <h2 class="card-title">Serviços</h2>
+                <p class="card-desc">Listagem completa dos serviços oferecidos e soluções disponíveis.</p>
+                <div class="card-arrow">Acessar página &rarr;</div>
+            </a>
+
+            <!-- Link 3 -->
+            <a href="Pagina3.html" class="nav-card">
+                <span class="card-number">Página 03</span>
+                <h2 class="card-title">Portfólio</h2>
+                <p class="card-desc">Exibição de projetos recentes, cases de sucesso e trabalhos realizados.</p>
+                <div class="card-arrow">Acessar página &rarr;</div>
+            </a>
+
+            <!-- Link 4 -->
+            <a href="Pagina4.html" class="nav-card">
+                <span class="card-number">Página 04</span>
+                <h2 class="card-title">Notícias / Blog</h2>
+                <p class="card-desc">Artigos atualizados, novidades da área, dicas e postagens informativas.</p>
+                <div class="card-arrow">Acessar página &rarr;</div>
+            </a>
+
+            <!-- Link 5 -->
+            <a href="Papgina5.html" class="nav-card">
+                <span class="card-number">Página 05</span>
+                <h2 class="card-title">Recursos</h2>
+                <p class="card-desc">Materiais para download, documentação técnica e guias úteis.</p>
+                <div class="card-arrow">Acessar página &rarr;</div>
+            </a>
+
+            <!-- Link 6 -->
+            <a href="Pagina6.html" class="nav-card">
+                <span class="card-number">Página 06</span>
+                <h2 class="card-title">Perguntas Frequentes</h2>
+                <p class="card-desc">Respostas diretas para as dúvidas mais comuns dos usuários.</p>
+                <div class="card-arrow">Acessar página &rarr;</div>
+            </a>
+
+            <!-- Link 7 -->
+            <a href="Pagina7.html" class="nav-card">
+                <span class="card-number">Página 07</span>
+                <h2 class="card-title">Contato</h2>
+                <p class="card-desc">Canais de comunicação, endereço, mapa e formulário de mensagem.</p>
+                <div class="card-arrow">Acessar página &rarr;</div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Meu Projeto Web. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
